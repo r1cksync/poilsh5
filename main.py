@@ -25,8 +25,8 @@ settings = Settings()
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Hindi OCR API (Tesseract H5 Model)",
-    description="Fast and efficient Hindi OCR using Tesseract optimized for serverless",
+    title="Hindi OCR API (Lightweight EasyOCR)",
+    description="Fast and efficient Hindi OCR using EasyOCR optimized for serverless",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -64,7 +64,7 @@ async def root():
         "service": "Hindi OCR API (Tesseract H5 Model)",
         "version": "1.0.0",
         "status": "running",
-        "model": "Tesseract OCR for Hindi",
+        "model": "EasyOCR for Hindi",
         "deployment": "serverless",
         "endpoints": {
             "health": "/health",

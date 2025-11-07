@@ -3,11 +3,11 @@ fastapi>=0.104.1
 uvicorn[standard]>=0.24.0
 python-multipart>=0.0.6
 
-# Custom H5 Model for Hindi OCR - Compatible with Python 3.12
-tensorflow>=2.16.0
-numpy>=1.24.0,<3.0.0
-opencv-python-headless>=4.8.0
+# Lightweight OCR for Hindi - No TensorFlow
+easyocr>=1.7.0
 Pillow>=10.1.0
+numpy>=1.24.0,<2.0.0
+opencv-python-headless>=4.8.0
 
 # HTTP and utilities
 requests>=2.31.0

@@ -1,22 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "main.py": {
-      "runtime": "python3.9",
-      "maxDuration": 60,
-      "memory": 1024
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "main.py"
     }
-  ],
-  "env": {
-    "PYTHONPATH": "/var/task",
-    "DEBUG": "false",
-    "CONFIDENCE_THRESHOLD": "0.5",
-    "USE_GPU": "false"
-  }
+  ]
 }

@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "100mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "/var/task",
+    "DEBUG": "false",
+    "CONFIDENCE_THRESHOLD": "0.5",
+    "USE_GPU": "false"
+  },
+  "functions": {
+    "main.py": {
+      "maxDuration": 60
+    }
+  }
+}
